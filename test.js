@@ -15,11 +15,11 @@ class Fetch {
           arguments: {
             WIDTH: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'https://extensions.turbowarp.org/test'
+              defaultValue: ''
             },
-	    HEIGHT: {
+			HEIGHT: {
               type: Scratch.ArgumentType.STRING,
-              defaultValue: 'https://extensions.turbowarp.org/test'
+              defaultValue: ''
             }
           }
         }
@@ -27,19 +27,9 @@ class Fetch {
     };
   }
 
-  _fetch (url) {
-    return fetch(url)
-      .then(r => {
-        this.lastResponse = r;
-        return r;
-      });
-  }
-
-  get (args) {
-    return this._fetch(args.URL)
-      .then(r => r.text())
-      .catch(() => '');
-  }
+    XYSize (args, util) {
+        util.target.setSize(WIDTH, HEIGHT);
+    }
 }
 
 Scratch.extensions.register(new Fetch());
