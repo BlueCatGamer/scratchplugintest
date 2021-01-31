@@ -16,8 +16,8 @@ class Fetch {
             WIDTH: {
               type: Scratch.ArgumentType.STRING,
               defaultValue: 'https://extensions.turbowarp.org/test'
-            }
-			      HEIGHT: {
+            },
+	    HEIGHT: {
               type: Scratch.ArgumentType.STRING,
               defaultValue: 'https://extensions.turbowarp.org/test'
             }
