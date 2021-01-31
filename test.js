@@ -9,11 +9,15 @@ class Fetch {
       name: 'Fetch',
       blocks: [
         {
-          opcode: 'get',
+          opcode: 'XYSize',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'GET [URL]',
+          text: 'Size [WIDTH][HEIGHT]',
           arguments: {
-            URL: {
+            WIDTH: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'https://extensions.turbowarp.org/test'
+            }
+			      HEIGHT: {
               type: Scratch.ArgumentType.STRING,
               defaultValue: 'https://extensions.turbowarp.org/test'
             }
